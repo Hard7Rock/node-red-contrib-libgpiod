@@ -4,6 +4,7 @@
     defaults: {
       name: { value: '' },
       state: { value: 'OUTPUT', required: true },
+      default_state: { value: '0', required: true },
       device: { value: 'gpiochip0', required: true },
       pin: { value: '', required: false },
     },
@@ -28,6 +29,13 @@
       <label for="node-input-state"><i class="fa fa-wrench"></i> Type</label>
       <select type="text" id="node-input-state" style="width: 200px;">
           <option value="OUTPUT">Digital (0/1)</option>
+      </select>
+  </div>
+    <div class="form-row">
+      <label for="node-input-state"><i class="fa fa-wrench"></i> Default</label>
+      <select type="text" id="node-input-default-state" style="width: 200px;">
+          <option value="0">0</option>
+          <option value="1">1</option>
       </select>
   </div>
   <div class="form-row" id="node-div-pinRow">
