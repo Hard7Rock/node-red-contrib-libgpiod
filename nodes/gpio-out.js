@@ -20,7 +20,7 @@ module.exports = function (RED) {
     try {
       node.chip = new Chip(node.device)
       node.line = new Line(node.chip, node.pin)
-      node.line.requestOutputMode()
+      node.line.requestOutputMode(node.default_state)
     } catch (e) {
       setError(node, e.message)
       return
